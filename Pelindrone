@@ -1,0 +1,5 @@
+num=input("Enter the Pelindrone number : ")
+if num == num[::-1]:
+    print("It is a pelindrone number")
+else:
+    print("It's not the pelindrone number")
