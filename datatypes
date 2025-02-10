@@ -1,0 +1,17 @@
+#practical 8
+n1=34
+print("The type of data: ",type(n1))
+n2=53.45
+print("The type of data: ", type(n2))
+n3=5+5j
+print("The type of data: ", type(n3))
+str="Hello"
+print("The type of data: ", type(str))
+l=["Apple","Banana","Kiwi"]
+print("The type of data: ", type(l))
+t=("Hii","Hello")
+print("The type of data: ", type(t))
+s={"Apple","Banana","Kiwi"}
+print("The type of data: ", type(s))
+d={"name":"Nandini","course":"BCA"}
+print("The type of data: ", type(d))
