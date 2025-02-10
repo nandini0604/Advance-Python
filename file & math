@@ -1,0 +1,31 @@
+#file function
+f1= open('abc.txt','w')
+f1.write('Hello user\n')
+l=['This is ahmedabad \n','This is abc \n', 'This is xyz \n']
+f1.writelines(l)
+f1.close()
+
+f1=open('abc.txt','r')
+print(f1.readline())
+f1.seek(0)
+
+#math function
+import datetime
+import math
+print("Current date and time", datetime.datetime.now())
+print( "pi: ",math.pi)
+a=4
+print("factorial: ",math.factorial(4))
+print("power: ",pow(3,4))
+print("sqrt: ",math.sqrt(4))
+r=3
+area=math.pi*r*r
+print("area: ",area)
+print("log: ",math.log(2,3))
+b=24,64,75,97,23
+print("maximum: ",max(b))
+print("minimum: ",min(b))
+c=2.5
+print("ceil: ",math.ceil(c))
+print("floor: ",math.floor(c))
+
