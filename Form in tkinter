@@ -1,0 +1,63 @@
+#develop a pyton program for making registration using Tkinter. (enrol no, student name,student mobile no,address,program name,semester,email id,date of birth,gender)(when clicking submit,message should be appear "you have registered successfully")
+from tkinter import*
+from tkinter import ttk
+from tkinter import messagebox
+root=Tk()
+root.title("Registration_form")
+root.geometry("400x400")
+def clicked():
+    messagebox.showinfo("Message","You have Registered successfully.")
+
+a=Label(root,text="Enrollment no : ",fg="black")
+a.grid(row=0,column=0)
+
+b=Label(root,text="Student name : ",fg="black")
+b.grid(row=1,column=0)
+
+c=Label(root,text="Student mobile no : ",fg="black")
+c.grid(row=2,column=0)
+
+d=Label(root,text="Address : ",fg="black")
+d.grid(row=3,column=0)
+
+e=Label(root,text="Program name : ",fg="black")
+e.grid(row=4,column=0)
+
+
+g=Label(root,text="Date of birth : ",fg="black")
+g.grid(row=6,column=0)
+
+h=Label(root,text="Email id : ",fg="black")
+h.grid(row=7,column=0)
+
+i= Label(root,text='Gender : ',fg="black")
+i.grid(row=8, column=0)
+j=Radiobutton(root,text="Female",value=1)
+j.grid(row=8,column=1)
+k=Radiobutton(root,text="Male",value=2)
+k.grid(row=8,column=2)
+
+a=Entry(root)
+a.grid(row=0,column=1)
+
+b=Entry(root)
+b.grid(row=1,column=1)
+
+c=Entry(root)
+c.grid(row=2,column=1)
+
+d=Entry(root)
+d.grid(row=3,column=1)
+
+e=Entry(root)
+e.grid(row=4,column=1)
+
+g=Entry(root)
+g.grid(row=6,column=1)
+
+h=Entry(root)
+h.grid(row=7,column=1)
+
+btn=Button(root,text="Submit",fg="Green", command=clicked)
+btn.grid(row=9, column=0)
+root.mainloop()
