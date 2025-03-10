@@ -11,6 +11,16 @@ def random_choice():
     fruit = random.choice(fruits)
     print(f"Random Fruit: {fruit}")
 
+# 3. Shuffle a list randomly
+def shuffle_list():
+    students = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace"]
+    random.shuffle(students)
+    print(f"Shuffled Students List: {students}")
+
+# 4. Generate a random floating-point number between 1.0 and 10.0
+def random_float():
+    number = random.uniform(1.0, 10.0)
+    print(f"Random Float between 1.0 and 10.0: {number}")
 
 # 5. Randomly sample 3 elements from a list
 def random_sample():
@@ -34,7 +44,8 @@ def roll_dice():
 if __name__ == "__main__":
     random_integer()
     random_choice()
+    shuffle_list()
+    random_float()
     random_sample()
     weighted_random_choice()
     roll_dice()
-
