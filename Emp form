@@ -1,0 +1,74 @@
+import tkinter as tk
+from tkinter import *
+from tkinter import messagebox
+
+root=tk.Tk()
+root.title("Employees_form")
+root.geometry('800x800')
+
+def submit_form():
+    id=e1.get()
+    name=e2.get()
+    no=e3.get()
+    join=e4.get()
+    pro=scrollbar.get()
+    exp=e5.get()
+    if id and name and no and join and pro and exp:
+        print(f"Employee ID : {id}")
+        print(f"Employee Name : {name}")
+        print(f"Employee Mobile NO. : {no}")
+        print(f"Employee Joining Date : {join}")
+        print(f"Employee Project Detail : {pro}")
+        print(f"Employee Experience : {exp}")
+        messagebox.showinfo("Registration Successful","You have registered successfully")
+    else:
+        messagebox.showerror("Error","All fields are required")
+    
+emp_id=Label(root,text="Employee ID : ")
+emp_id.pack(pady=5)
+e1=Entry(root)
+e1.pack(pady=5,padx=6)
+
+emp_name=Label(root,text="Employee Name : ")
+emp_name.pack(pady=5)
+e2=Entry(root)
+e2.pack(pady=5)
+
+emp_no=Label(root,text="Employee Mobile NO. : ")
+emp_no.pack(pady=5)
+e3=Entry(root)
+e3.pack(pady=5)
+
+emp_join=Label(root,text="Employee Joining Date : ")
+emp_join.pack(pady=5)
+e4=Entry(root)
+e4.pack(pady=5)
+
+emp_pro=Label(root,text="Employee Project Detail : ")
+emp_pro.pack(pady=5)
+scrollbar=tk.Scrollbar(root,orient=tk.VERTICAL)
+listbox=tk.Listbox(root,yscrollcommand=scrollbar.set,height=4,width=10)
+listbox.pack(pady=5)
+scrollbar.config(command=listbox.yview)
+scrollbar.pack(side=tk.RIGHT,fill=tk.Y)
+project=["LMS","Account","SMS","ERP"]
+for i in project:
+    listbox.insert(tk.END, i)
+
+emp_exp=Label(root,text="Employee Experience : ")
+emp_exp.pack(pady=5)
+e5=Entry(root)
+e5.pack(pady=5)
+
+Gen=Label(root,text="Gender : ")
+Gen.pack(pady=5)
+e6=Radiobutton(root,text="Male",value=1)
+e6.pack(pady=5)
+e7=Radiobutton(root,text="Female",value=2)
+e7.pack(pady=5)
+
+btn=tk.Button(root,text="Submit",fg="green",command=submit_form)
+btn.pack(pady=5)
+btn1=tk.Button(root,text="Cancel",fg="red")
+btn1.pack(pady=5)
+root.mainloop()
